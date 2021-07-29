@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.highlight { background: #66ffff}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    text-align: center !important;
+    font-size: 18px !important;
+    height: 50px;
+}
+
+
+th {
+    background-color: aliceblue !important;
+}
+
+.mat-card-title {
+    text-align: center !important;
+    color: #3b71ab !important;
+    padding-bottom: 6px !important;
+}

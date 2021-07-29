@@ -1,0 +1,12 @@
+<div class="application-content-parent">
+    <app-employee-navigation-panel [SelectedItem]="SelectedSection" (SectionSelected)="NewSectionSelected($event)">
+    </app-employee-navigation-panel>
+
+    <div class="application-content-selectedarea">
+        <app-overview *ngIf="SelectedSection == 'Overview'" (SectionSelected)="NewSectionSelected($event)">
+        </app-overview>
+        <app-benefits-enrollment *ngIf="SelectedSection == 'Benefits'"></app-benefits-enrollment>
+        <app-not-implemented *ngIf="SelectedSection != 'Benefits' && SelectedSection != 'Overview'">
+        </app-not-implemented>
+    </div>
+</div>

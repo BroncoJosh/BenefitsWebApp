@@ -1,0 +1,80 @@
+<div>
+    <table mat-table [dataSource]="employeeListDataSource">
+        <ng-container matColumnDef="EmployeeId">
+            <th mat-header-cell *matHeaderCellDef>Employee ID</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.EmployeeId}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef><button mat-raised-button color="primary" (click)="AddNewEmployee()">Add New Employee</button></td>
+        </ng-container>
+
+        <ng-container matColumnDef="EmployeeName">
+            <th mat-header-cell *matHeaderCellDef>Employee Name</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.LastName}}, {{row.FirstName}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+
+        <ng-container matColumnDef="DependentCount">
+            <th mat-header-cell *matHeaderCellDef>Dependent Count</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.DependentCount}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef>{{getTotals('DependentCount')}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="EmployeeBenefitsAmount">
+            <th mat-header-cell *matHeaderCellDef>Employee Benefits Amount</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.EmployeeBenefitsAmount | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotals('EmployeeBenefitsAmount') | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="DependentBenefitsAmount">
+            <th mat-header-cell *matHeaderCellDef>Dependent Benefits Amount</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.DependentBenefitsAmount | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotals('DependentBenefitsAmount') | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="TotalBenefitsAmount">
+            <th mat-header-cell *matHeaderCellDef>Total Benefits Amount</th>
+            <td mat-cell *matCellDef="let row">
+                {{row.EmployeeBenefitsAmount + row.DependentBenefitsAmount | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotals('DependentBenefitsAmount') + getTotals('EmployeeBenefitsAmount') | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Paycheck">
+            <th mat-header-cell *matHeaderCellDef>Paycheck</th>
+            <td mat-cell *matCellDef="let row">
+                {{getPaycheckAmount(row) | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{(getTotals('SalaryAmount'))/PaycheckInterval | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="PaycheckDeductions">
+            <th mat-header-cell *matHeaderCellDef>Paycheck Deductions</th>
+            <td mat-cell *matCellDef="let row">
+                {{(row.EmployeeBenefitsAmount + row.DependentBenefitsAmount)/PaycheckInterval | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{(getTotals('DependentBenefitsAmount') + getTotals('EmployeeBenefitsAmount'))/PaycheckInterval | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="PaycheckAdjusted">
+            <th mat-header-cell *matHeaderCellDef>Paycheck Adjusted</th>
+            <td mat-cell *matCellDef="let row" [ngClass]="{'benefits-exceed-pay-warn': (getPaycheckAmount(row) - ((row.EmployeeBenefitsAmount + row.DependentBenefitsAmount)/PaycheckInterval)) < 0}">
+                {{getPaycheckAmount(row) - ((row.EmployeeBenefitsAmount + row.DependentBenefitsAmount)/PaycheckInterval) | currency}}
+            </td>
+            <td mat-footer-cell *matFooterCellDef> {{(getTotals('SalaryAmount')/PaycheckInterval) - (getTotals('DependentBenefitsAmount') + getTotals('EmployeeBenefitsAmount')/PaycheckInterval) | currency}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"
+            [ngClass]="{'highlight': selectedRow == row.EmployeeId}" (click)="selectRow(row.EmployeeId)"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+    </table>
+</div>

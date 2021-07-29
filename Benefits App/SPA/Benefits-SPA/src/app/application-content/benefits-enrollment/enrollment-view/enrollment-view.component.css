@@ -1,0 +1,51 @@
+.benefits-title {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.enrollment-view-parent {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.enrollment-view-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+.employee-info-card th {
+    background-color: white !important;
+    /* border: 1px solid slategrey; */
+}
+
+.benefits-breakdown-card th {
+    text-align: right !important;
+}
+
+.tooltip-green {
+    background: #74c769;
+    font-size: 15px;
+  }
+
+.dependents-list-table {
+    width: 100%;
+    height: 250px;
+    /* min-width: 250px; */
+    border-top: 2px solid black;
+    overflow: auto;
+}
+
+@media screen and (max-width: 770px)
+{
+    .mat-card {
+        width: 100%;
+    }
+
+}

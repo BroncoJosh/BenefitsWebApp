@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Remove {{data.area }} Confirmation</h1>
+<mat-dialog-content>
+    Are you should you would like to remove this {{data.area}}?
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-stroked-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-stroked-button [mat-dialog-close]="true" color="warn" cdkFocusInitial>Continue with Removal of {{data.area}}</button>
+</mat-dialog-actions>

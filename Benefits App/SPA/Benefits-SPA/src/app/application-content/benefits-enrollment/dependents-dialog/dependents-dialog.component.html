@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>{{data.actiontype == 'EDIT' ? 'Edit Existing' : 'Add New'}} Dependent</h2>
+<mat-dialog-content>
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <th>Dependent ID</th>
+            <th>Benefits Amount</th>
+        </tr>
+        <tr>
+            <td>{{EmployeeId}}</td>
+            <td>{{DependentId}}</td>
+            <td>{{ (FirstName.value.length > 0 ? GetBenefitsAmount() : 0) | currency}}</td>
+        </tr>
+    </table>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput type="text" [formControl]="FirstName" pattern="[a-zA-Z ]*">
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput type="text" [formControl]="LastName" pattern="[a-zA-Z ]*">
+                    </mat-form-field>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Date Of Birth</mat-label>
+                        <input matInput [matDatepicker]="dobPicker" [formControl]="DateOfBirth">
+                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #dobPicker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <mat-select [(value)]="Gender" required>
+                            <mat-option *ngFor="let opt of GenderList" [value]="opt.id">
+                                {{opt.desc}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+    </div>
+</mat-dialog-content>
+
+
+<mat-dialog-actions align="end">
+    <button mat-flat-button color="primary" (click)="SaveChanges()">{{ data.actiontype == 'EDIT' ? 'Save Changes' : 'Add Dependent' }}</button>
+    <button mat-stroked-button color="warn" mat-dialog-close>Close Popup</button>
+</mat-dialog-actions>

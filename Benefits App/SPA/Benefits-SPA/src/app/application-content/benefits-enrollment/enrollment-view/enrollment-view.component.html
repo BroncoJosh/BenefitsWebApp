@@ -1,0 +1,132 @@
+<!-- Only show this section once an Employee has been selected and data is fully retrieved from server-->
+<div class="enrollment-view-parent" *ngIf="EmployeeInfo != null && DependentsList != null">
+    <div class="enrollment-view-row">
+        <div class="employee-info-card">
+            <mat-card-header>
+                <mat-card-title>Employee Information for: {{EmployeeInfo.FirstName}} {{EmployeeInfo.LastName}}
+                </mat-card-title>
+                <mat-card-subtitle>Employee ID: {{EmployeeInfo.EmployeeId}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <table>
+                    <tr>
+                        <th>Annual Salary</th>
+                        <th>Benefits Amount</th>
+                    </tr>
+                    <tr>
+                        <td>{{EmployeeInfo.SalaryAmount | currency}}</td>
+                        <td>
+                            <mat-icon *ngIf="HasDiscountedRate(EmployeeInfo.FirstName, 'Employee')"
+                                matTooltipClass="tooltip-green" matTooltip="Discounted Benefits Rate!">local_offer
+                            </mat-icon>
+                            {{EmployeeInfo.BenefitsAmount | currency }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button mat-raised-button color="primary" (click)="EditEmployee()"><mat-icon>edit</mat-icon>Edit Employee</button></td>
+                        <td><button mat-raised-button color="warn" (click)="removeEmployee()"><mat-icon>delete</mat-icon>Remove Employee</button></td>
+                    </tr>
+                </table>
+            </mat-card-content>
+
+
+        </div>
+        <div class="employee-info-card benefits-breakdown-card">
+            <mat-card-header>
+                <mat-card-title>Benefits Calculation</mat-card-title>
+                <mat-card-subtitle>Total Benefits (for Employee & {{DependentsList.length}} Dependents)
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+
+                <table>
+                    <tr>
+                        <th>Dependent(s) Benefit Amount:</th>
+                        <td>
+                            <!-- Deducting Employee Amount from Total Benefits Cost (Employee + Dependents) -->
+                            {{getTotalBenefitsAmountForEmployeeAndDependents() - EmployeeInfo.BenefitsAmount| currency}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Dependents + Employee:</th>
+                        <td>
+                            {{getTotalBenefitsAmountForEmployeeAndDependents() | currency}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Paycheck ({{PaycheckInterval}}) Deduction :</th>
+                        <td>
+                            {{getTotalBenefitsAmountForEmployeeAndDependents() / PaycheckInterval | currency}}
+                        </td>
+                    </tr>
+                </table>
+            </mat-card-content>
+        </div>
+    </div>
+    <div>
+        <div>
+            <mat-card-header>
+                <mat-card-title>
+                    Employee Dependents:
+                    <button mat-stroked-button color="primary" (click)="addNewDependent()">Add New Dependent</button>
+                </mat-card-title>
+            </mat-card-header>
+            <div class="dependents-list-table">
+                <table mat-table [dataSource]="dependentListDataSource">
+                    <ng-container matColumnDef="DependentId">
+                        <th mat-header-cell *matHeaderCellDef>Dependent ID</th>
+                        <td mat-cell *matCellDef="let row">
+                            {{row.DependentId}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="FullName">
+                        <th mat-header-cell *matHeaderCellDef>Dependent Name</th>
+                        <td mat-cell *matCellDef="let row">
+                            {{row.LastName}}, {{row.FirstName}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="DateOfBirth">
+                        <th mat-header-cell *matHeaderCellDef>DOB</th>
+                        <td mat-cell *matCellDef="let row">
+                            {{row.DateOfBirth | date: 'MM/dd/yyyy'}}
+
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="BenefitsAmount">
+                        <th mat-header-cell *matHeaderCellDef>Benefits Amount</th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-icon *ngIf="HasDiscountedRate(row.FirstName, 'Dependent')"
+                                matTooltip="Discounted Benefits Rate!" matTooltipClass="tooltip-green">local_offer
+                            </mat-icon>
+                            {{row.BenefitsAmount | currency}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="EditDependent">
+                        <th mat-header-cell *matHeaderCellDef>Edit?</th>
+                        <td mat-cell *matCellDef="let row">
+                            <button mat-icon-button color="primary" (click)="editSelectedDependent(row)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="RemoveDependent">
+                        <th mat-header-cell *matHeaderCellDef>Delete?</th>
+                        <td mat-cell *matCellDef="let row">
+                            <button mat-icon-button color="warn" (click)="removeSelectedRow(row)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

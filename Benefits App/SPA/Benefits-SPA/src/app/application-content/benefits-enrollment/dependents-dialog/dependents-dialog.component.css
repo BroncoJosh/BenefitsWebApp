@@ -1,0 +1,31 @@
+.mat-dialog-content {
+    min-width: 470px;
+}
+
+.mat-dialog-title {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -24px !important;
+    margin-bottom: 0px !important;
+    height: 50px;
+    text-align: center;
+    background: #1995fa;
+    color: white;
+    font-size: 24px;
+}
+
+th, td {
+    font-size: 18px !important;
+    height: 25px;
+}
+
+th {
+    background-color: white !important;
+    /* border: 1px solid slategrey; */
+}
+
+.mat-form-field {
+    max-width: 200px;
+}

@@ -1,0 +1,23 @@
+.navbar-styling {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* background-image: linear-gradient(to right, #378ea2, #3f51b5) !important; */
+    background: white !important;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+  
+  @media (max-width: 285px) {
+    .navbar-styling span{
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 215px) {
+    .navbar-styling span{
+      font-size: 10px;
+    }
+  }

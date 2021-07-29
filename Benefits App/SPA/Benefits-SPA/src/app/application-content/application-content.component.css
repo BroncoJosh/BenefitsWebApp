@@ -1,0 +1,11 @@
+.application-content-parent {
+    height: calc(100% - 64px);
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.application-content-selectedarea {
+    width: calc(100% - 250px);
+    height: 100%;
+}

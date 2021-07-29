@@ -1,0 +1,46 @@
+.employee-navigation-parent {
+    height: 100%;
+    width: 250px;
+    background-image: linear-gradient(rgb(0, 92, 185), rgb(8, 117, 225));
+    
+}
+
+.employee-navigation-inner-content {
+    height: 80%;
+    display:flex;
+    flex-flow: column;
+    align-content:space-around;
+    justify-content:space-evenly;
+}
+
+.mat-button-toggle-group {
+    width: 248px;
+}
+.mat-button-toggle-appearance-standard {
+    background: #fff0 !important;
+    color: white;
+    border: 0px !important;
+}
+
+.mat-button-toggle-checked {
+    background: rgb(1, 62, 123) !important;
+}
+
+.employee-image-div {
+    width: 100%;
+    text-align: center;
+}
+.employee-image-div img {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+}
+
+h2, h4 {
+    color: white;
+}

@@ -1,0 +1,25 @@
+<div class="employee-navigation-parent">
+    <div class="employee-navigation-inner-content">
+        <div class="employee-image-div">
+            <img src="/assets/generic_employee_photo.png" type="image/png">
+            <h2>Welcome JOHN DOE</h2>
+            <h4>HR Manager</h4>
+        </div>
+        <div>
+            <mat-button-toggle-group vertical>
+                <mat-button-toggle [checked]="SelectedItem == 'Overview'" (change)="NewSectionSelected('Overview')">
+                    <mat-icon>feed</mat-icon> Overview
+                </mat-button-toggle>
+                <mat-button-toggle [checked]="SelectedItem == 'New Employee Hire'" (change)="NewSectionSelected('New Employee Hire')">
+                    <mat-icon>badge</mat-icon> New Employee Hire
+                </mat-button-toggle>
+                <mat-button-toggle [checked]="SelectedItem == 'Benefits'" (change)="NewSectionSelected('Benefits')">
+                    <mat-icon>health_and_safety</mat-icon> Benefits
+                </mat-button-toggle>
+                <mat-button-toggle [checked]="SelectedItem == 'Pay'" (change)="NewSectionSelected('Pay')">
+                    <mat-icon>paid</mat-icon> Pay
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+</div>
