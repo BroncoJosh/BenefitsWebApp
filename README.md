@@ -28,7 +28,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project 
 
 <img src="http://joshwhite.tech/img/BenefitsWebApp.png"
      alt="Benefits Web App"
@@ -59,7 +59,9 @@ The DB creation scripts can be found in the [DB folder](https://github.com/Bronc
 
 
 ### Prerequisites
-
+  The Following Software should be installed:
+  * Visual Studio 
+  * (optional for SPA) Visual Studio Code
 
 
 ### Installation
@@ -72,12 +74,19 @@ The DB creation scripts can be found in the [DB folder](https://github.com/Bronc
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+The Front End of the Application is currently hardcoded (in environment.ts) to fetch/push API requests to https://localhost:44352/api
 
-
+The API portion of the Application is currently hardcoded to 
+  - Allow localhost:4200 as an origin (in Startup.cs)
+  - set the Database Connectionstring (LocalDB) in appsettings.json. Removed for commit
 
 <!-- FUTURE ENHANCEMENTS -->
 ## FutureEnhancements
-
+The Following were not added to the Application (due to timing constraints):
+  - API testing for PUSH/POST/DELETE Calls in EmployeeController and Dependent Controller. 
+    - This would have included having a TestHelper that created a test Employee & Dependent entry in their corresponding DB Tables
+  - In depth testing of the HTTP requests in the Front End
+  - In Depth documention for the API Controller Methods
 
 
 
