@@ -58,7 +58,9 @@ The DB creation scripts can be found in the [DB folder](https://github.com/Bronc
 ## Getting Started
 
 ### Design
-TODO
+<img src="http://joshwhite.tech/img/UMLDiagramBenefitsWebApp.png"
+     alt="UML Diagram"
+     style="float: left; margin-right: 10px;" />
 
 ### Prerequisites
   The Following Software should be installed:
