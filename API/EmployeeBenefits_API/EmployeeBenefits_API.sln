@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBenefits_API", "EmployeeBenefits_API.csproj", "{7D007E37-7FB4-4A9B-87EA-DD86A291048D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBenefits_API_Tests", "..\EmployeeBenefits_API_Tests\EmployeeBenefits_API_Tests.csproj", "{A2AE2D63-CF06-49D7-BFEF-B3C084A5601E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D007E37-7FB4-4A9B-87EA-DD86A291048D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D007E37-7FB4-4A9B-87EA-DD86A291048D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D007E37-7FB4-4A9B-87EA-DD86A291048D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D007E37-7FB4-4A9B-87EA-DD86A291048D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AE2D63-CF06-49D7-BFEF-B3C084A5601E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AE2D63-CF06-49D7-BFEF-B3C084A5601E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AE2D63-CF06-49D7-BFEF-B3C084A5601E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AE2D63-CF06-49D7-BFEF-B3C084A5601E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEB1BB84-6F4F-4196-9603-A98C1410C1E2}
+	EndGlobalSection
+EndGlobal
