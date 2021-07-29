@@ -13,6 +13,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#design">Design</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -56,7 +57,8 @@ The DB creation scripts can be found in the [DB folder](https://github.com/Bronc
 <!-- GETTING STARTED -->
 ## Getting Started
 
-
+### Design
+TODO
 
 ### Prerequisites
   The Following Software should be installed:
