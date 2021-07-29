@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -80,5 +82,31 @@ namespace EmployeeBenefits_API_Tests
             //Act/Assert
             Assert.Null(exception);
         }
+
+
+
+        /* API Functions */
+
+        //Test that making a GET Request to Dependents/GetDependentsForEmployee returns a list of Dependents
+        [Fact]
+        public async Task PerformGetRequest_GetDependentsForEmployee_ReturnsResults()
+        {
+            string url = "https://localhost:44352/api/Dependent/GetDependentsForEmployee/1";
+            using (var handler = new HttpClientHandler { UseDefaultCredentials = true })
+            {
+                using (HttpClient client = new HttpClient(handler))
+                {
+                    client.DefaultRequestHeaders.Add("Accept", "application/json, text/plain, */*");
+
+                    var response = await client.GetStringAsync(url);
+                    Assert.NotNull(response);
+                    Assert.True(response.Length > 0);
+                }
+            }
+
+
+        }
+
+        
     }
 }

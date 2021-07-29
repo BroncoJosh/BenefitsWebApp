@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj": {}
+    "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj": {}
   },
   "projects": {
-    "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
+    "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
+        "projectUniqueName": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
         "projectName": "EmployeeBenefits_API",
-        "projectPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
+        "projectPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\obj\\",
+        "outputPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -86,14 +86,14 @@
         }
       }
     },
-    "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj": {
+    "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj",
+        "projectUniqueName": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj",
         "projectName": "EmployeeBenefits_API_Tests",
-        "projectPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj",
+        "projectPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API_Tests\\EmployeeBenefits_API_Tests.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API_Tests\\obj\\",
+        "outputPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -113,8 +113,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
-                "projectPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj"
+              "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
+                "projectPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj"
               }
             }
           }

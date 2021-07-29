@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {}
+    "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {}
   },
   "projects": {
-    "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
+    "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
+        "projectUniqueName": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
         "projectName": "EmployeeBenefits_API",
-        "projectPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
+        "projectPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\EmployeeBenefits_API.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "E:\\Software Development\\Professional Career\\Paylocity\\Coding Challenge\\API\\EmployeeBenefits_API\\obj\\",
+        "outputPath": "E:\\source\\Benefits Web App\\BenefitsWebApp\\Benefits App\\API\\EmployeeBenefits_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
