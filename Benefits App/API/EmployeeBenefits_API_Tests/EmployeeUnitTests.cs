@@ -143,7 +143,7 @@ namespace EmployeeBenefits_API_Tests
 
                     var response = await client.GetStringAsync(url);
                     Assert.NotNull(response);
-                    Assert.True(response.Length == 0);
+                    Assert.True(response.Length > 0);
                 }
             }
 
@@ -162,7 +162,7 @@ namespace EmployeeBenefits_API_Tests
                     client.DefaultRequestHeaders.Add("Accept", "application/json, text/plain, */*");
 
                     var response = await client.GetAsync(url);
-                    Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
                 }
             }
 
