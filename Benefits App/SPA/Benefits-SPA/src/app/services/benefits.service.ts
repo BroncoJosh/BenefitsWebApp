@@ -39,7 +39,8 @@ export class BenefitsService {
   getEmployeeInfo() {
     if(this.EmployeeId == null)
     {
-      this.DisplaySnackBar('Employee ID is NULL', 'Get Employee Info');
+      //Would be called after adding employee, temporarily remove snackbar and just remove
+      // this.DisplaySnackBar('Employee ID is NULL', 'Get Employee Info');
       return;
     }
     this.httpRequestsService.getItems('Employee/GetEmployeeInfo', 'Get Employee Info', this.EmployeeId.toString(), this.selectedEmployeeWasUpdatedSubscription, this.selectedEmployeeWasUpdated)
@@ -48,7 +49,8 @@ export class BenefitsService {
   getDependentsForEmployee() {
     if(this.EmployeeId == null)
     {
-      this.DisplaySnackBar('Employee ID is NULL', 'Get Employee Info');
+      //Would be called after adding employee, temporarily remove snackbar and just remove
+      // this.DisplaySnackBar('Employee ID is NULL', 'Get getDependentsForEmployee Info');
       return;
     }
     this.httpRequestsService.getItems('Dependent/GetDependentsForEmployee', 'Get Dependents For Employee', this.EmployeeId.toString(), this.dependentsForEmployeeListWasUpdatedSubscription, this.dependentsForEmployeeListWasUpdated)

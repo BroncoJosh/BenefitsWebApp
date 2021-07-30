@@ -58,9 +58,9 @@ export class EmployeeDialogComponent implements OnInit {
     }
 
     var EmployeeObject = {
-      EmployeeId: this.EmployeeId,
+      EmployeeId: this.data.actiontype == "EDIT" ? this.EmployeeId : 0,
       BenefitsAmount: this.GetBenefitsAmount(),
-      DateOfBirth: this.DateOfBirth,
+      DateOfBirth: this.DateOfBirth.value,
       FirstName: this.FirstName.value,
       LastName: this.LastName.value,
       Gender: this.Gender == '' ? 'P' : this.Gender
