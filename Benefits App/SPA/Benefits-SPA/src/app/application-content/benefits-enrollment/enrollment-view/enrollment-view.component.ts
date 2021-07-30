@@ -113,7 +113,7 @@ export class EnrollmentViewComponent implements OnInit, OnDestroy {
     const dialogRef = this.employeeDialog.open(EmployeeDialogComponent,
       {
         data: {
-          dependent: this.EmployeeInfo,
+          employee: this.EmployeeInfo,
           actiontype: 'EDIT'
         }
       });
